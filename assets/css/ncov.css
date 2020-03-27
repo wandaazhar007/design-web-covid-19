@@ -1,0 +1,60 @@
+.corona {
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    justify-content: center;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.corona .box {
+    background: #20966E;
+    padding: 20px;
+    display: grid;
+    font-size: 20px;
+    place-items: center;
+    text-align: center;
+    color: #ffffff;
+    transition: 0.2s;
+}
+
+.corona .box:hover {
+    background: rgb(7, 173, 179);
+}
+.corona .box img {
+    position: relative;
+    max-width: 20%;
+    margin-bottom: 10px;
+}
+.corona .box:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.corona .box:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.corona .box:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+.corona .box:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+@media (max-width: 991px) {
+    .corona {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .corona .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+}
